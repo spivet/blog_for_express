@@ -1,0 +1,28 @@
+extends ../layout.pug
+
+block content
+  div.ui.middle.aligned.center.aligned.grid.login
+    div.column
+      h2.ui.teal.image.header
+        img.image(src="assets/images/logo.png")
+        div.content Log-in to your account
+
+      form.ui.large.form(action="/login",method="post")
+        div.ui.stacked.segment
+          div.field
+            div.ui.left.icon.input
+              i.user.icon
+              input(type="text", name="username", placeholder="请输入账号")
+          div.field
+            div.ui.left.icon.input
+              i.lock.icon
+              input(type="password", name="password", placeholder="请输入密码")
+          button.ui.fluid.large.teal.submit.button(type="submit") Login
+
+        div.ui.error.message
+
+      //- 先注释掉，暂时不用注册
+        <div class="ui message">
+          New to us? <a href="#">Sign Up</a>
+        </div>
+

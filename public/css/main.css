@@ -1,0 +1,71 @@
+html, body {
+  height: 100%;
+}
+
+/*最左侧侧边栏的样式*/
+.sidebar {
+  width: 40px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #444;
+}
+.sidebar__logo {
+  line-height: 40px;
+  background-color: #ff6666;
+  color: #fff;
+  text-align: center;
+}
+.sidebar__btn_login, .sidebar__btn_logout {
+  width: 40px;
+  line-height: 40px;
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  color: #d4d4d5;
+  text-align: center;
+  cursor: pointer;
+}
+.sidebar__btn_login:hover, 
+.sidebar__btn_logout:hover {
+  color: #fff;
+  background-color: #666;
+}
+
+/*右侧内容*/
+.ui.main {
+  height: 100%;
+  margin-left: 40px;
+}
+
+.label {
+  vertical-align: middle;
+}
+
+/*login页面*/
+.login.grid {
+  height: 100%;
+}
+.login .column {
+  width: 450px !important;
+}
+
+/*文章详情页面*/
+.like {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid #ff6666;
+  border-radius: 3px;
+  margin: 50px auto;
+  text-align: center;
+  cursor: pointer;
+}
+.like i {
+  margin: 0;
+  color: #ff6666;
+  font-size: 30px;
+}
+.like:hover {
+  background-color: rgba(236,97,73,.05);
+}

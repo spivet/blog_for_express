@@ -1,0 +1,11 @@
+//- 首页的文章列表页（articleList/:id）和文章详情页（article）最左边的侧栏
+div.sidebar
+  div.sidebar__logo 旧
+
+  if signed
+    a.sidebar__btn_logout(href="/logout", title="退出")
+      i(class="sign out icon")
+  else
+    a.sidebar__btn_login(href="/login", title="登录")
+      i(class="sign in icon")
+  

@@ -1,0 +1,19 @@
+html
+  head
+    title 登录
+    script(src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js")
+  body
+    div
+      if username
+        p 账号错误
+      if password
+        p 密码错误
+      form(action="/login",method="post")
+        div
+          input(id="username",type="text",name="username",placeholder="请输入账号")
+        div
+          input(id="password",type="password",name="password",placeholder="请输入密码")
+        div
+          button(id="submit",type="submit") 提交
+
+    //- script(src="/js/login.js")

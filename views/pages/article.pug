@@ -1,0 +1,17 @@
+//- 文章详情页
+extends ../layout.pug
+
+block content
+  //- 最左侧侧边栏
+  include ../components/sidebar.pug
+
+  div.ui.main
+    //- 顶部导航
+    include ../components/header.pug
+    //- 文章主体内容
+    article.ui.text.container
+      h1.ui.header #{title}
+      p 时间·#{updatetime}
+      div.content__article!= content
+      div.like(data-tooltip="赞一下")
+        i.thumbs.outline.up.icon
