@@ -11,7 +11,9 @@ block content
     //- 文章主体内容
     article.ui.text.container
       h1.ui.header #{title}
-      p 时间·#{updatetime}
+      div.article__label
+        span.ui.orange.basic.label 时间·#{updatetime}
+        div.ui.labeled.tiny.button(tabindex="0")
+          div.ui.orange.tiny.button!= '<i class="heart icon"></i>Like'
+          a.ui.basic.orange.tiny.left.pointing.label #{likes}
       div.content__article!= content
-      div.like(data-tooltip="赞一下")
-        i.thumbs.outline.up.icon

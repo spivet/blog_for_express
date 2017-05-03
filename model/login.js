@@ -6,30 +6,30 @@ var user = mongoose.model('user', {
   name: String
 });
 
-var renderLogin = function (req, res) {
+var renderLogin = function (username, password, callback) {
   var info = null;
-  if (req.query.username === 'false') {
-    info = { username: req.query.username };
+  if (username === 'false') {
+    info = { success: false, msg: '用户名不存在' };
   }
-  if (req.query.password === 'false') {
-    info = { password: req.query.password };
+  if (password === 'false') {
+    info = { success: false, msg: '密码错误' };
   }
-  res.render('../views/pages/login', info)
+  callback(info)
 };
 
-var checkUser = function (req, res) {
-  user.find({ account: req.body.username }, function (err, result) {
+var checkUser = function (username, password, callback) {
+  user.find({ account: username }, function (err, result) {
     if (err) {
       console.log(err)
     }
 
     if (result.length === 0) {
-      res.redirect('/login?username=false')
+      callback('/login?username=false')
     } else {
-      if (req.body.password === result[0].password) {
-        res.redirect('/')
+      if (password === result[0].password) {
+        callback('/')
       } else {
-        res.redirect('/login?password=false')
+        callback('/login?password=false')
       }
     }
   })

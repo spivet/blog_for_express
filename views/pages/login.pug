@@ -3,9 +3,9 @@ extends ../layout.pug
 block content
   div.ui.middle.aligned.center.aligned.grid.login
     div.column
-      h2.ui.teal.image.header
-        img.image(src="assets/images/logo.png")
-        div.content Log-in to your account
+      if !success
+        div.ui.error.message
+          div.header #{msg}
 
       form.ui.large.form(action="/login",method="post")
         div.ui.stacked.segment
@@ -18,8 +18,6 @@ block content
               i.lock.icon
               input(type="password", name="password", placeholder="请输入密码")
           button.ui.fluid.large.teal.submit.button(type="submit") Login
-
-        div.ui.error.message
 
       //- 先注释掉，暂时不用注册
         <div class="ui message">

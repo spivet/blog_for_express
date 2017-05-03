@@ -51,21 +51,20 @@ html, body {
 }
 
 /*文章详情页面*/
-.like {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  border: 1px solid #ff6666;
-  border-radius: 3px;
-  margin: 50px auto;
-  text-align: center;
-  cursor: pointer;
+.ui.header:first-child {
+  margin-top: 2.8rem;
+  margin-bottom: 2rem;
 }
-.like i {
-  margin: 0;
-  color: #ff6666;
-  font-size: 30px;
+.article__label {
+  padding-right: 1rem;
+  margin-bottom: 20px;
+  text-align: right;
 }
-.like:hover {
-  background-color: rgba(236,97,73,.05);
+.article__label .label {
+  padding: .78571429em .5em;
+  margin-right: 20px;
+}
+.article__label .label,
+.article__label .button {
+  vertical-align: middle;
 }
