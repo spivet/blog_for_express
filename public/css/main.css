@@ -68,3 +68,80 @@ html, body {
 .article__label .button {
   vertical-align: middle;
 }
+
+/*文章编辑页面*/
+.edit__container {
+  margin-top: 2rem;
+}
+.uploader {
+  position: relative;
+  width: 167px;
+  height: 167px;
+}
+.uploader:hover .input__upload-label {
+  display: block;
+}
+.input__upload {
+  display: none;
+}
+.input__upload-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 2;
+  display: none;
+  cursor: pointer;
+}
+.uploader:before,
+.input__upload-label:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+}
+.uploader:after,
+.input__upload-label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 5px;
+  height: 30px;
+  background-color: #fff;
+}
+.uploader:before,
+.uploader:after {
+  background-color: #ccc;
+  z-index: -1;
+}
+#input__upload-img {
+  width: 167px;
+  height: 167px;
+}
+.editor-container {
+  margin-top: 2rem;
+}
+#editor {
+  height: 600px;
+}
+#edit__button_submit {
+  margin-top: 1rem;
+}
+
+/*footer样式*/
+footer {
+  height: 100px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  margin-top: 50px;
+}
+footer p {
+}

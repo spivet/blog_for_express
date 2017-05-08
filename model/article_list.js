@@ -64,10 +64,21 @@ var renderManage = function (callback) {
   })
 }
 
+// 文章编辑保存
+var saveArticle = function (article_opt, callback) {
+  var newArticle = new article(article_opt);
+  newArticle.save(function (err, result) {
+    if (err) console.log(err)
+    console.log(result)
+    callback(result._id)
+  })
+}
+
 var modelHome = {
   renderArticleList: renderArticleList,
   renderArticle: renderArticle,
-  renderManage: renderManage
+  renderManage: renderManage,
+  saveArticle: saveArticle
 };
 
 module.exports = modelHome;
