@@ -32,6 +32,17 @@ html, body {
   background-color: #666;
 }
 
+/*左侧封面*/
+.aside {
+  padding-top: 150px;
+  background: url('http://file06.16sucai.com/2016/0301/21ac0f4669b65346f103b83f7e63af9f.jpg') no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.text__intro {
+  color: #fff;
+}
+
 /*右侧内容*/
 .ui.main {
   height: 100%;
@@ -48,6 +59,11 @@ html, body {
 }
 .login .column {
   width: 450px !important;
+}
+
+/*文章列表页面*/
+.description {
+  padding-right: 80px;
 }
 
 /*文章详情页面*/
@@ -67,6 +83,11 @@ html, body {
 .article__label .label,
 .article__label .button {
   vertical-align: middle;
+}
+
+/*文章管理页面*/
+.manage {
+  margin-top: 3rem;
 }
 
 /*文章编辑页面*/

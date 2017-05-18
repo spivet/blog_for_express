@@ -1,0 +1,33 @@
+//- 文章详情页
+extends ../layout.pug
+
+block content
+  //- 最左侧侧边栏
+  include ../components/sidebar.pug
+
+  div.ui.main
+    //- 顶部导航
+    include ../components/header.pug
+    //- 文章主体内容
+    div.ui.container.manage
+      table.ui.orange.table
+        thead
+         tr
+           th 名称
+           th 创建时间
+           th 修改时间
+           th 访问量
+           th 编辑
+           th 删除
+        tbody#tbody__manage
+
+        tfoot
+          tr
+            th(colspan="6")
+              div.ui.right.floated.pagination.menu#pagination
+      include ../components/footer.pug   
+
+  script(src="/js/jqPaginator.min.js")
+  script(src="/js/manage.js")
+
+          

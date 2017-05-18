@@ -11,9 +11,9 @@ block content
       aside.four.wide.column.aside
         div.ui.small.circular.image
           img(src="/img/avatar.jpg", alt="头像")
-        p.text__intro 愿你走出半生
+        p.text__intro(style="margin-top:150px;") 愿你走出半生
         p.text__intro 归来仍是少年
-        div.buttons__social
+        div.buttons__social(style="margin-top:150px;")
           a(href="https://github.com/Mcbai")
             i.github.icon
           a(href="http://weibo.com/u/5600270831")
@@ -27,8 +27,8 @@ block content
           a.item(href="/article/list/it") 编程
         
         //- 文章列表
-        each articleItem in articleLists
-          div.ui.divided.items
+        div.ui.divided.items
+          each articleItem in articleLists
             div.item
               div.content
                 a.header(href="/article/content/" + articleItem._id) #{articleItem.title}
