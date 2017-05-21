@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+
+// 处理POST请求需要安装body-parser中间件
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: true })
 var modelLogin = require('../model/login.js');

@@ -18,8 +18,8 @@ $(function () {
               +    '<td>'+data[i].createtime+'</td>' 
               +    '<td>'+data[i].updatetime+'</td>' 
               +    '<td>'+data[i].pv+'</td>' 
-              +    '<td><a class="ui primary basic button" href="/admin/edit/"'+data[i]._id+'>编辑</a></td>' 
-              +    '<td><a class="ui negative basic button" href="/admin/delete/"'+data[i]._id+'>编辑</a></td>' 
+              +    '<td><a class="ui primary basic button" href="/admin/edit/'+data[i]._id+'">编辑</a></td>' 
+              +    '<td><a class="ui negative basic button" href="/admin/delete/'+data[i]._id+'">删除</a></td>' 
               +  '</tr>'
         }
         $('#tbody__manage').html(str)

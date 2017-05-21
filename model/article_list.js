@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
+// 定义Schema
 var articleSchema = new mongoose.Schema({
-  // _id: mongoose.Schema.Types.ObjectId,
   author: String,
   createtime: String,
   updatetime: String,
@@ -16,6 +16,7 @@ var articleSchema = new mongoose.Schema({
   likes: Number,
   image: String
 })
+// 存入数据库之前的操作
 articleSchema.pre('save', function (next) {
   var date = new Date();
   if (this.isNew) {
@@ -25,8 +26,9 @@ articleSchema.pre('save', function (next) {
   }
   next()
 });
-
+// 定义model，关联相关的表
 var articleModel = mongoose.model('article_list', articleSchema);
+
 function findArticle(option, callback) {
   articleModel.find(option, function (err, result) {
     if (err) console.log(err);
